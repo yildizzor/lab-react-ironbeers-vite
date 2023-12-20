@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import "./AllBeersPage.css";
+import "../components/Beer.css";
 
 function AllBeersPage() {
   const [allBeers, setAllBeers] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const beers = async () => {
@@ -19,8 +20,30 @@ function AllBeersPage() {
     beers();
   }, []);
 
+  const searchBeer = (event) => {
+    axios
+      .get(
+        `https://ih-beers-api2.herokuapp.com/beers/search?q=${event.target.value}`
+      )
+      .then((response) => {
+        console.log(response.data);
+        setAllBeers(response.data);
+      });
+
+    setSearch(event.target.value);
+  };
+
   return (
     <>
+      <div className="search-box">
+        <input
+          value={search}
+          type="text"
+          placeholder="Search Beer"
+          onChange={searchBeer}
+        />
+      </div>
+
       {allBeers.map((beer) => {
         return (
           <div className="beer-card" key={beer._id}>

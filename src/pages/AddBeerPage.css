@@ -1,0 +1,32 @@
+.add-beer-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.add-beer-container input,
+button,textarea  {
+  padding: 10px;
+  width: 500px;
+  border-radius: 40px;
+  border: solid black;
+}
+
+.add-beer-container button {
+  background-color: rgb(36, 154, 148);
+  font-size: 20px;
+}
+
+.add-beer-container label {
+  font-size: 20px;
+
+  color:rgba(136, 124, 124, 0.05)k;
+}
+
+.add-beer-container textarea {
+
+  border-radius: 40px;
+  border: solid black;
+  padding: 10px;
+  width: 500px;
+}

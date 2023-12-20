@@ -18,3 +18,16 @@
   color: grey;
   font-size: 30px;
 }
+
+.search-box {
+  display: flex;
+  justify-content: center;
+}
+
+.search-box input {
+  width: 600px;
+  padding: 10px;
+  border: solid blue;
+  border-radius: 20px;
+  margin-top: 30px;
+}
