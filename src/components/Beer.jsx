@@ -2,6 +2,8 @@ import React from "react";
 import "./Beer.css";
 
 function Beer({ beer }) {
+  console.log(beer);
+
   return (
     <div className="beer-card">
       <img className="beer-img" src={beer.image_url}></img>

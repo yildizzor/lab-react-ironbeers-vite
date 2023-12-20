@@ -2,14 +2,15 @@ import { Link } from "react-router-dom";
 import beers from "../assets/beers.png";
 import randomBeer from "../assets/random-beer.png";
 import newBeer from "../assets/new-beer.png";
+import "./HomePage.css";
 
 function HomePage() {
   return (
-    <div>
+    <div className="home-page">
       <Link to="/beers">
         <img className="card" src={beers}></img>
         <h3>All Beers</h3>
-        <p style={{ width: "50%" }}>
+        <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -22,7 +23,7 @@ function HomePage() {
       <img className="card" src={randomBeer}></img>
       <Link to="/random-beer">
         <h3>Random Beer</h3>
-        <p style={{ width: "50%" }}>
+        <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -35,7 +36,7 @@ function HomePage() {
       <img className="card" src={newBeer}></img>
       <Link to="/new-beer">
         <h3>New Beer</h3>
-        <p style={{ width: "50%" }}>
+        <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
